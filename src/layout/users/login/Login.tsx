@@ -13,6 +13,8 @@ export const Login = () => {
     e.preventDefault();
 
     await login!(userName, password);
+    // setUserName('')
+    // setPassword('')
   };
 
   return (
