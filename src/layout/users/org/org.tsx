@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../../provaiders/AuthProvider';
 
-export const org = () => {
+export const Org = () => {
+
+    const {user} = useContext(AuthContext) ?? {};
+    console.log(user);
+    
+
   return (
-    <div>org</div>
+    <>
+    <div>{user && <h1> organization {user.username}</h1>}</div>
+    <div>{!user && <h1> Not found user plzzzz login</h1>}</div>
+</>
   )
 }
